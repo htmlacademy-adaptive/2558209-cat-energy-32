@@ -1,0 +1,36 @@
+.products-card__heading {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: $secondary-font;
+  color: $special-color-black;
+  text-transform: uppercase;
+}
+
+.products-card__param {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $base-color-text;
+}
+
+.products-card-more__heading {
+  font-size: 16px;
+  line-height: 20px;
+  font-weight: 400;
+  font-family: $secondary-font;
+  color: $bg-color-black;
+  text-transform: uppercase;
+}
+
+.products-card-more__description {
+  font-size: 12px;
+  line-height: 16px;
+  font-weight: 400;
+  color: $base-color-text;
+}
+
+.products-card-more__button {
+  color: $base-color-text;
+  background-color: $bg-color-grey;
+}

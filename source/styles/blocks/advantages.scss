@@ -1,0 +1,29 @@
+.advantages__list {
+  font-weight: 400;
+}
+
+.advantages__item {
+  background-color: $bg-basic-grey;
+}
+
+.advantages__item-heading {
+  font-size: 24px;
+  line-height: 37px;
+  font-family: $secondary-font;
+  color: $bg-basic-black;
+  text-transform: uppercase;
+}
+
+.advantages__text {
+  font-size: 14px;
+  line-height: 18px;
+  color: $base-color-text;
+}
+
+.advantages__link {
+  font-size: 16px;
+  line-height: 16px;
+  font-family: $secondary-font;
+  color: $bg-basic-black;
+  text-transform: uppercase;
+}
