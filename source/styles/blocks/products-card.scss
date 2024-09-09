@@ -1,36 +1,22 @@
 .products-card__heading {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  font-family: $secondary-font;
-  color: $special-color-black;
+  @include text-style(16px, 29px, 400, $secondary-font, $card-color-title);
   text-transform: uppercase;
 }
 
 .products-card__param {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
-  color: $base-color-text;
+  @include text-style(12px, 16px, 400);
 }
 
 .products-card-more__heading {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  font-family: $secondary-font;
-  color: $bg-color-black;
+  @include text-style(16px, 20px, 400, $secondary-font, $bg-basic-text);
   text-transform: uppercase;
 }
 
 .products-card-more__description {
-  font-size: 12px;
-  line-height: 16px;
-  font-weight: 400;
-  color: $base-color-text;
+  @include text-style(12px, 16px, 400);
 }
 
 .products-card-more__button {
   color: $base-color-text;
-  background-color: $bg-color-grey;
+  background-color: $bg-color-button-secondary;
 }

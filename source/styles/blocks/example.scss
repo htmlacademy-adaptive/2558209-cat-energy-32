@@ -1,30 +1,22 @@
 .example {
-  background-color: $special-dark-grey;
+  background-color: $bg-card-special;
 }
 
 .example__description {
-  font-size: 14px;
-  line-height: 18px;
-  font-weight: 400;
-  color: $base-color-text;
+  @include text-style(14px, 18px, 400);
 }
 
 .example__value {
-  font-size: 24px;
-  line-height: 24px;
-  font-family: $secondary-font;
+  @include text-style(24px, 24px, 400, $secondary-font, $bg-basic-text);
   text-transform: uppercase;
-  color: $bg-basic-black;
 }
 
 .example__params {
-  font-weight: 400;
-  font-size: 12px;
-  line-height: 12px;
-  color: $base-color-text;
+  @include text-style(12px, 12px, 400);
 }
 
 .example__value--total {
+  @include text-style(14px, 20px, 400, $secondary-font, $bg-basic-text);
   font-size: 14px;
   line-height: 20px;
 }
@@ -32,5 +24,5 @@
 .example__params--total {
   font-family: $secondary-font;
   text-transform: uppercase;
-  color: $bg-basic-black;
+  color: $bg-basic-text;
 }

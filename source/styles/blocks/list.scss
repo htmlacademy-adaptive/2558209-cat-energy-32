@@ -1,7 +1,10 @@
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .list__link {
-  font-size: 20px;
-  line-height: 20px;
-  font-weight: 400;
-  color: $bg-basic-black;
+  @include text-style(20px, 20px, 400, $secondary-font, $bg-basic-text);
   text-transform: uppercase;
 }

@@ -1,10 +1,6 @@
 .button {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  color: $bg-basic-white;
-  background-color: $bg-basic-green;
-  font-family: $secondary-font;
+  @include text-style(16px, 20px, 400, $secondary-font, $text-with-bg-color);
+  background-color: $bg-color-secondary;
   text-decoration: none;
   text-transform: uppercase;
 }

@@ -1,10 +1,7 @@
 .present {
-  background-color: $bg-basic-green;
+  background-color: $bg-color-secondary;
 }
 
 .present__description {
-  font-size: 16px;
-  line-height: 20px;
-  font-weight: 400;
-  color: $bg-basic-white;
+  @include text-style(16px, 16px, 400, $primary-font, $text-with-bg-color);
 }

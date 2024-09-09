@@ -1,7 +1,9 @@
+.products__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
 .products__heading {
-  font-size: 36px;
-  line-height: 36px;
-  font-weight: 400;
-  font-family: $secondary-font;
-  color: $bg-basic-black;
+  @include text-style(36px, 36px, 400, $secondary-font, $bg-basic-text);
 }
