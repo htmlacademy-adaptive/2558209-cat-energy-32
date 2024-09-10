@@ -1,6 +1,7 @@
 .button {
   @include text-style(16px, 20px, 400, $secondary-font, $text-with-bg-color);
   background-color: $bg-color-secondary;
+  border: none;
   text-decoration: none;
   text-transform: uppercase;
 }

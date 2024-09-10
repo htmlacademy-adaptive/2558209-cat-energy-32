@@ -7,3 +7,30 @@
 .work__text {
   @include text-style(16px, 14px, 400);
 }
+
+.work__item::before {
+  content: "";
+  display: block;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 30px 32px;
+  background-color: $bg-color-secondary;
+  width: 60px;
+  height: 60px;
+}
+
+.work__item--card-one::before {
+  @include bg-icon-image("leaf");
+}
+
+.work__item--card-two::before {
+  @include bg-icon-image("water");
+}
+
+.work__item--card-three::before {
+  @include bg-icon-image("eat");
+}
+
+.work__item--card-four::before {
+  @include bg-icon-image("clock");
+}

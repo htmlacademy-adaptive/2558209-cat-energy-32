@@ -17,12 +17,18 @@
   <header class="header">
     <div class="container">
       <a class="header__logo logo" href="./index.html">
-        <img class="logo__image logo__image--icon" src="images/logo-mobile.svg" width="33" height="38" alt="Логотип">
-        <img class="logo__image logo__image--title" src="images/logo-2.svg" width="101" height="18" alt="Заголовок логотипа">
+        <picture>
+          <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59">
+          <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50">
+          <img class="logo__image logo__image--icon" src="images/logo-mobile.svg" alt="Логотип" width="33" height="38">
+        </picture>
+        <img class="logo__image logo__image--title" src="images/logo-text.svg" alt="Cat Energy" width="101" height="18">
       </a>
     </div>
     <nav class="nav">
-      <button class="nav__toggle button-burger" type="button">Меню</button>
+      <button class="nav__toggle button-burger" type="button">
+        <span class="visually-hidden">Открыть меню</span>
+      </button>
       <ul class="nav__list list">
         <li class="list__item list__item--current">
           <a class="list__link" href="./index.html">Главная</a>
@@ -236,19 +242,25 @@
   <footer class="footer">
     <div class="container">
       <a class="footer__logo logo-title" href="/">
-        <img class="logo-title__image" src="/" width="128" height="24" alt="Заголовок логотипа">
+        <img class="logo-title__image" src="images/logo-text.svg" alt="Cat Energy" width="128" height="24">
       </a>
       <div class="footer__social-network social-network">
         <h2 class="visually-hidden">Социальные сети</h2>
         <ul class="social-network__list">
           <li class="social-network__item">
-            <a class="social-network__link social-network__link--vk" href="/">vk</a>
+            <a class="social-network__link social-network__link--vk" href="/">
+              <span class="visually-hidden">vk</span>
+            </a>
           </li>
           <li class="social-network__item">
-            <a class="social-network__link social-network__link--youtube" href="/">youtube</a>
+            <a class="social-network__link social-network__link--youtube" href="/">
+              <span class="visually-hidden">youtube</span>
+            </a>
           </li>
           <li class="social-network__item">
-            <a class="social-network__link social-network__link--telegram" href="/">telegram</a>
+            <a class="social-network__link social-network__link--telegram" href="/">
+              <span class="visually-hidden">telegram</span>
+            </a>
           </li>
         </ul>
       </div>
@@ -256,7 +268,6 @@
     <div class="copyright">
       <a class="copyright__link" href="https://htmlacademy.ru/intensive/adaptive">
         <span class="copyright__name">HTML Academy</span>
-        <span class="copyright__logo">Логотип</span>
       </a>
     </div>
   </footer>

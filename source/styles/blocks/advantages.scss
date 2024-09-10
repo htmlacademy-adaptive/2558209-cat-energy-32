@@ -1,5 +1,23 @@
 .advantages__item {
   background-color: $separator-color;
+
+  &::before {
+    content: "";
+    display: block;
+    width: 67px;
+    height: 50px;
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: contain;
+  }
+}
+
+.advantages__item--slim::before {
+  @include bg-icon-image("cat-slim");
+}
+
+.advantages__item--pro::before {
+  @include bg-icon-image("cat-pro");
 }
 
 .advantages__item-heading {
@@ -13,7 +31,23 @@
 
 .advantages__link {
   @include text-style(16px, 16px, 400, $secondary-font, $bg-basic-text);
+  display: flex;
+  align-items: center;
   text-transform: uppercase;
+
+  &::after {
+    @include bg-icon-image("arrow");
+    content: "";
+    margin-left: 15px;
+    width: 24px;
+    height: 12px;
+    transition: transform 0.3s linear;
+    transform-origin: left center;
+  }
+
+  &:is(:hover, :active, :focus-visible, :focus)::after {
+    transform: scaleX(1.35);
+  }
 }
 
 .advantages__list {

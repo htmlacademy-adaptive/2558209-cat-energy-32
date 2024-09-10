@@ -1,3 +1,26 @@
 .copyright__name {
   @include text-style(16px, 20px, 400);
 }
+
+.copyright__link {
+  &::before {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-image: url("../../icons/stack.svg#html-academy");
+    background-color: $bg-color-control;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &:is(:hover, :focus-visible, :focus)::before {
+    background-color: $bg-color-secondary;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+}

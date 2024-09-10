@@ -15,3 +15,7 @@
   line-height: $line-height;
   color: $color;
 }
+
+@mixin bg-icon-image($id) {
+  background-image: url("../../icons/stack.svg#"+$id);
+}

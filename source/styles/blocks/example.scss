@@ -26,3 +26,62 @@
   text-transform: uppercase;
   color: $bg-basic-text;
 }
+
+.example__slider-control-button {
+  position: relative;
+  display: block;
+  padding: 0;
+  width: 4px;
+  height: 512px;
+  background-color: $bg-color-control;
+  border: none;
+  transition: background-color 0.3s ease-in-out;
+
+  &::before {
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    display: block;
+    background-color: $text-with-bg-color;
+    border: 2px solid $bg-color-control;
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    transform: translate(-50%, -50%);
+    transition: border-color 0.3s ease-in-out;
+  }
+
+  &::after {
+    content: "";
+    position: absolute;
+    display: block;
+    left: 50%;
+    top: 50%;
+    mask-image: url("../../icons/stack.svg#controls");
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-position: center;
+    background-color: $bg-color-control;
+    width: 24px;
+    height: 18px;
+    transform: translate(-50%, -50%);
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &:is(:hover, :focus-visible, :focus) {
+    background-color: $bg-color-secondary;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  &:is(:hover, :focus-visible, :focus)::before {
+    border-color: $bg-color-secondary;
+  }
+
+  &:is(:hover, :focus-visible, :focus)::after {
+    background-color: $bg-color-secondary;
+  }
+}
