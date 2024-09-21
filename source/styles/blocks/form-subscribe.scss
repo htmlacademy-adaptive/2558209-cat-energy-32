@@ -10,7 +10,17 @@
   padding: 13px;
   margin-bottom: 16px;
   width: 100%;
-  border: 1px solid $bg-border-color-value;
+  border: 1px solid $bg-border-color-input;
+  opacity: border-color ease-in-out 0.3;
+  z-index: 10;
+
+  &:hover {
+    border-color: $bg-border-color-value;
+  }
+
+  &:focus {
+    outline: 2px solid $base-color-text;
+  }
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;

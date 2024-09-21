@@ -65,6 +65,13 @@
   padding: 10px 0;
   color: $base-color-text;
   background-color: $bg-color-button-secondary;
+  transition: background-color ease-in-out 0.3s;
+
+  &:hover,
+  &:active {
+    background-color: $separator-color-card;
+    color: $base-color-text;
+  }
 
   @media (min-width: $tablet-width) {
     margin-top: auto;
