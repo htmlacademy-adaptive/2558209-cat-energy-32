@@ -5,6 +5,70 @@
 }
 
 .list__link {
-  @include text-style(20px, 20px, 400, $secondary-font, $bg-basic-text);
+  @include text-style(18px, 20px, 400, $secondary-font, $bg-basic-text);
+  display: block;
+  text-align: center;
   text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    font-size: 18px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    font-size: 20px;
+    line-height: 30px;
+    color: $text-with-bg-color;
+  }
+}
+
+.list__link-catalog {
+  @media (min-width: $desktop-width) {
+    color: $card-title-color-secondary;
+  }
+}
+
+.list__item {
+  position: relative;
+  padding: 23px;
+  border-top: 1px solid $bg-border-color-section;
+
+  &:not(:last-child) {
+    margin-right: 13px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding: 10px;
+    border-top: none;
+  }
+}
+
+.list__item--current {
+  @media (min-width: $tablet-width) {
+    &::after {
+      content: "";
+      display: block;
+      position: absolute;
+      bottom: 0;
+      left: 10px;
+      right: 10px;
+      background-color: $bg-color-secondary;
+      width: auto;
+      height: 2px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    &::after {
+      background-color: $text-with-bg-color;
+    }
+  }
+}
+
+.list__item--current-catalog {
+  @media (min-width: $desktop-width) {
+    &::after {
+      background-color: $bg-color-secondary;
+    }
+  }
 }

@@ -1,9 +1,30 @@
 .products__list {
+  display: flex;
+  flex-wrap: wrap;
   margin: 0;
   padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    gap: 60px;
+    max-width: 708px;
+    margin-inline: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 65px 80px;
+    max-width: 1220px;
+  }
 }
 
 .products__heading {
   @include text-style(36px, 36px, 400, $secondary-font, $bg-basic-text);
+  margin: 27px 0 41px;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
 }

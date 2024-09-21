@@ -1,1 +1,32 @@
-/* plug */
+.page__body {
+  display: flex;
+  flex-direction: column;
+  min-width: $content-width-mobile;
+  min-height: 100vh;
+}
+
+.page__catalog {
+  grid-template-rows: auto;
+  grid-template-columns: auto;
+  margin-bottom: 0;
+  border-bottom: 1px solid $separator-color;
+
+  &::before {
+    display: none;
+  }
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+    margin-right: auto;
+    width: 708px;
+    border-bottom: none;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 1220px;
+  }
+}
+
+.page__catalog-contacts {
+  background-color: $bg-color-button-secondary;
+}

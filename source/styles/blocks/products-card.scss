@@ -1,22 +1,100 @@
+.products-card {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  border-top: 1px solid $separator-color-card;
+
+  &:last-of-type {
+    border-bottom: 1px solid $bg-card-special;
+  }
+
+  @media (min-width: $tablet-width) {
+    border-top: none;
+    width: unset;
+  }
+
+  @media (min-width: $desktop-width) {
+    &:last-of-type {
+      border-bottom: none;
+    }
+  }
+}
+
+.products-card__container {
+  display: grid;
+  grid-template-rows: repeat(3, auto);
+  grid-template-columns: 140px 140px;
+  padding: 20px 0 25px;
+
+  @media (min-width: $tablet-width) {
+    grid-template-rows: minmax(100px, auto) 1fr auto;
+    grid-template-columns: 1fr;
+    gap: 16px;
+    padding: 0 37px 40px;
+    width: 324px;
+    background: linear-gradient(transparent 81px, $bg-color-button-secondary 81px);
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-rows: minmax(100px, auto) auto 1fr auto;
+    gap: 7px;
+    width: 245px;
+  }
+}
+
 .products-card__heading {
-  @include text-style(16px, 29px, 400, $secondary-font, $card-color-title);
+  @include text-style(16px, 20px, 400, $secondary-font, $card-color-title);
+  margin: 0;
   text-transform: uppercase;
+  width: 90px;
+
+  @media (min-width: $tablet-width) {
+    text-align: center;
+    justify-self: center;
+    width: 150px;
+    font-size: 20px;
+    line-height: 24px;
+  }
 }
 
 .products-card__param {
   @include text-style(12px, 16px, 400);
+
+  @media (min-width: $tablet-width) {
+    font-size: 16px;
+    line-height: 20px;
+  }
 }
 
-.products-card-more__heading {
-  @include text-style(16px, 20px, 400, $secondary-font, $bg-basic-text);
-  text-transform: uppercase;
+.products-card__link {
+  place-self: center;
+  grid-row: 1 / -2;
 }
 
-.products-card-more__description {
-  @include text-style(12px, 16px, 400);
+.products-card__param-container {
+  display: flex;
+  justify-content: space-between;
+
+  @media (min-width: $tablet-width) {
+    padding: 5px 0;
+    border-bottom: 1px solid $bg-border-color-value;
+  }
 }
 
-.products-card-more__button {
-  color: $base-color-text;
-  background-color: $bg-color-button-secondary;
+.products-card__button {
+  grid-area: -2 / 1 / -1 / -1;
+  padding: 10px 0;
+  text-align: center;
+  margin-top: 20px;
+
+  @media (min-width: $tablet-width) {
+    grid-area: unset;
+  }
+}
+
+.products-card__button--additional {
+  @media (min-width: $desktop-width) {
+    margin-top: 0;
+    width: 30%;
+  }
 }

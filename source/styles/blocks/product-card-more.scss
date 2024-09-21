@@ -1,4 +1,13 @@
 .products-card-more {
+  @media (min-width: $tablet-width) {
+    padding-top: 81px;
+  }
+}
+
+.products-card-more__container {
+  display: flex;
+  flex-direction: column;
+
   &::before {
     @include bg-icon-image("plus");
     content: "";
@@ -6,7 +15,58 @@
     background-position: center;
     background-repeat: no-repeat;
     background-size: contain;
+    place-self: center;
+    margin-bottom: 24px;
     width: 30px;
     height: 30px;
+  }
+
+  @media (min-width: $tablet-width) {
+    padding-top: 50px;
+    justify-content: center;
+    border: 2px solid $bg-color-button-secondary;
+    background: transparent;
+
+    &::before {
+      width: 60px;
+      height: 60px;
+    }
+  }
+}
+
+.products-card-more__heading {
+  @include text-style(16px, 20px, 400, $secondary-font, $bg-basic-text);
+  margin: 0;
+  margin-bottom: 14px;
+  text-transform: uppercase;
+
+  @media (min-width: $tablet-width) {
+    padding-inline: 35px;
+    text-align: center;
+    font-size: 20px;
+    line-height: 24px;
+  }
+}
+
+.products-card-more__description {
+  @include text-style(12px, 16px, 400);
+  margin: 0;
+  margin-bottom: 20px;
+
+  @media (min-width: $tablet-width) {
+    padding-inline: 35px;
+    text-align: center;
+    font-size: 16px;
+    line-height: 18px;
+  }
+}
+
+.products-card-more__button {
+  padding: 10px 0;
+  color: $base-color-text;
+  background-color: $bg-color-button-secondary;
+
+  @media (min-width: $tablet-width) {
+    margin-top: auto;
   }
 }

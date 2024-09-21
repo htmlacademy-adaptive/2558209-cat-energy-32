@@ -1,1 +1,13 @@
-/* plug */
+.container {
+  width: $content-width-mobile;
+  margin-left: auto;
+  margin-right: auto;
+
+  @media (min-width: $tablet-width) {
+    width: $content-width-tablet;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: $content-width-desktop;
+  }
+}
