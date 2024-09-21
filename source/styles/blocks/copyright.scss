@@ -28,7 +28,7 @@
     transition: background-color 0.3s ease-in-out;
   }
 
-  &:is(:hover, :focus-visible, :focus)::before {
+  &:is(:hover, :focus-visible, :focus)::after {
     background-color: $bg-color-secondary;
   }
 
