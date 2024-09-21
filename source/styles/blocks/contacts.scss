@@ -34,10 +34,11 @@
 .contacts__heading {
   @include text-style(16px, 20px, 400, $secondary-font, $bg-basic-text);
   margin: 0;
-  width: 50%;
+  width: 100%;
   text-transform: uppercase;
 
-  @media (min-width: $tablet-width) {
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 100%;
     font-size: 20px;
     line-height: 26px;
   }
@@ -49,14 +50,14 @@
 
 .contacts__address {
   @include text-style(14px, 20px, 400);
-  width: 50%;
+  width: 100%;
   font-style: normal;
 
   @media (min-width: $tablet-width) {
     text-align: right;
     font-size: 16px;
+    width: 100%;
     line-height: 20px;
-    width: 30%;
   }
 
   @media (min-width: $desktop-width) {
@@ -70,4 +71,16 @@
     display: inline-block;
     margin-bottom: 19px;
   }
+}
+
+.contacts__container-street {
+  width: 100%;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 35%;
+  }
+}
+
+.contacts__container-heading {
+  width: 100%;
 }

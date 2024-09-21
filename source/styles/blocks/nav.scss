@@ -8,10 +8,14 @@
 
   @media (min-width: $tablet-width) {
     margin-left: auto;
-    width: unset;
+    max-width: 500px;
     visibility: visible;
     opacity: 1;
     height: auto;
+  }
+
+  @media (min-width: $desktop-width) {
+    max-width: 50%;
   }
 }
 
@@ -37,6 +41,15 @@
   @media (min-width: $tablet-width) {
     display: flex;
     align-items: center;
-    flex-wrap: wrap;
+    flex-flow: wrap;
+    justify-content: end;
+    gap: 0 13px;
   }
+}
+
+.nav--open-nojs {
+  position: static;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
 }
