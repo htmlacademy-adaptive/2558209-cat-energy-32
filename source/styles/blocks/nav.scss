@@ -1,3 +1,42 @@
 .nav {
+  visibility: hidden;
+  opacity: 0;
+  flex-shrink: 0;
+  width: 100%;
+  height: 0;
+  transition: opacity 0.5s;
+
+  @media (min-width: $tablet-width) {
+    margin-left: auto;
+    width: unset;
+    visibility: visible;
+    opacity: 1;
+    height: auto;
+  }
+}
+
+.nav--open {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 65px;
+  visibility: visible;
+  opacity: 1;
+  height: auto;
+  transition: opacity 0.5s;
   font-family: $secondary-font;
+  background-color: $text-with-bg-color;
+
+  @media (min-width: $tablet-width) {
+    position: unset;
+    background-color: transparent;
+  }
+}
+
+.nav__list {
+  @media (min-width: $tablet-width) {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+  }
 }
