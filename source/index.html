@@ -21,15 +21,15 @@
           <picture>
             <source type="image/svg+xml" media="(min-width: 1440px)" srcset="images/logo-desktop.svg" width="70" height="59">
             <source type="image/svg+xml" media="(min-width: 768px)" srcset="images/logo-tablet.svg" width="60" height="50">
-            <img class="logo__image logo__image--icon" src="images/logo-mobile.svg" alt="Логотип" width="33" height="38">
+            <img class="logo__image logo__image--icon" src="images/logo-mobile.svg" alt="Логотип Cat Energy" width="33" height="38">
           </picture>
           <img class="header__logo-title logo__image logo__image--title" src="images/logo-text.svg" alt="Cat Energy" width="101" height="18">
         </a>
-        <button class="header__toggle button-burger" type="button">
+        <button class="header__toggle button-burger button-burger--close" type="button">
           <span class="visually-hidden">Открыть меню</span>
         </button>
       </div>
-      <nav class="nav">
+      <nav class="nav nav--open-nojs">
         <ul class="nav__list list">
           <li class="list__item list__item--current">
             <a class="list__link" href="./index.html">Главная</a>
@@ -119,7 +119,7 @@
           </picture>
           <button class="example__slider-control-button" type="button">
             <span class="visually-hidden">
-              Переключить
+              Переключить вид кота
             </span>
           </button>
         </div>
@@ -127,11 +127,15 @@
     </section>
     <section class="contacts">
       <div class="contacts__container-address">
-        <h3 class="contacts__heading">Приглашаем <br> к сотрудничеству <br> дилеров!</h3>
-        <address class="contacts__address">
-          <span class="contacts__address-street">ул. Большая Конюшенная, д. 19/8</span>
-          Санкт-Петербург
-        </address>
+        <div class="contacts__container-heading">
+          <h3 class="contacts__heading">Приглашаем <br> к сотрудничеству <br> дилеров!</h3>
+        </div>
+        <div class="contacts__container-street">
+          <address class="contacts__address">
+            <span class="contacts__address-street">ул. Большая Конюшенная, д. 19/8</span>
+            Санкт-Петербург
+          </address>
+        </div>
       </div>
       <div class="contacts-map">
         <script async src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3Aa70b588485700b86dbeb0b23fb0b46061e5efc784e68ea2d456d7e1fca6dc536&amp;width=100%25&amp;height=100%25&amp;lang=ru_RU&amp;scroll=true"></script>

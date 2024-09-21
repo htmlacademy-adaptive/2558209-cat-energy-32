@@ -42,10 +42,6 @@
   padding: 23px;
   border-top: 1px solid $bg-border-color-section;
 
-  &:not(:last-child) {
-    margin-right: 13px;
-  }
-
   @media (min-width: $tablet-width) {
     padding: 10px;
     border-top: none;

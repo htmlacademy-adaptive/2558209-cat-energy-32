@@ -59,6 +59,7 @@
 
 .products-card__param {
   @include text-style(12px, 16px, 400);
+  margin: 0;
 
   @media (min-width: $tablet-width) {
     font-size: 16px;
@@ -69,6 +70,10 @@
 .products-card__link {
   place-self: center;
   grid-row: 1 / -2;
+
+  @media (min-width: $tablet-width) {
+    grid-row: unset;
+  }
 }
 
 .products-card__param-container {
@@ -97,4 +102,8 @@
     margin-top: 0;
     width: 30%;
   }
+}
+
+.products-card__image {
+  height: 225px;
 }
