@@ -8,7 +8,10 @@
 
   @media (min-width: $tablet-width) {
     margin-left: auto;
+    margin-right: -4px;
+    padding-top: 4px;
     max-width: 500px;
+    width: unset;
     visibility: visible;
     opacity: 1;
     height: auto;
@@ -16,6 +19,8 @@
 
   @media (min-width: $desktop-width) {
     max-width: 50%;
+    margin-right: -8px;
+    padding-top: 6px;
   }
 }
 

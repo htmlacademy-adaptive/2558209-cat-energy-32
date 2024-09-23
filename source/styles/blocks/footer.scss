@@ -3,15 +3,19 @@
 }
 
 .footer__container {
-  padding: 16px 0 0;
+  padding: 21px 0 20px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 
   @media (min-width: $tablet-width) {
-    padding: 35px 0;
+    padding: 36px 0;
     flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 53px 0;
   }
 }
 
@@ -23,6 +27,7 @@
   width: 100%;
 
   @media (min-width: $tablet-width) {
+    justify-content: flex-start;
     border-bottom: unset;
   }
 }

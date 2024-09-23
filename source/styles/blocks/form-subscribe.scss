@@ -3,12 +3,17 @@
 
   @media (min-width: $tablet-width) {
     display: flex;
+    width: 89%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 61.5%;
   }
 }
 
 .form-subscribe__input {
   padding: 13px;
-  margin-bottom: 16px;
+  margin-bottom: 18px;
   width: 100%;
   border: 1px solid $bg-border-color-input;
   opacity: border-color ease-in-out 0.3;
@@ -24,6 +29,7 @@
 
   @media (min-width: $tablet-width) {
     margin-bottom: 0;
+    padding: 10px 10px 1px 11px;
   }
 }
 
@@ -35,5 +41,15 @@
 .form-subscribe__button {
   padding: 15px 0;
   text-align: center;
+  font-size: 20px;
+  line-height: 26px;
   width: 100%;
+
+  @media (min-width: $tablet-width) {
+    width: 70%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 52%;
+  }
 }

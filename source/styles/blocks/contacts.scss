@@ -12,16 +12,16 @@
   align-items: center;
   margin: 0 auto;
   width: 280px;
-  padding: 26px 0;
+  padding: 25px 0;
 
   @media (min-width: $tablet-width) {
-    padding: 60px 40px;
+    padding: 61px 40px;
     width: 708px;
   }
 
   @media (min-width: $desktop-width) {
     display: grid;
-    padding: 60px 80px;
+    padding: 61px 80px;
     margin-inline: unset;
     grid-area: 2 / 2 / 3 / 3;
     grid-template-columns: 1fr 160px;
@@ -61,6 +61,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-left: 5px;
     text-align: start;
     width: 100%;
   }
@@ -71,13 +72,21 @@
     display: inline-block;
     margin-bottom: 19px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 18px;
+  }
 }
 
 .contacts__container-street {
   width: 100%;
 
-  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+  @media (min-width: $tablet-width) {
     width: 35%;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 100%;
   }
 }
 

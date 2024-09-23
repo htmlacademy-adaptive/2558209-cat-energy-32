@@ -19,12 +19,18 @@
 
 .products__heading {
   @include text-style(36px, 36px, 400, $secondary-font, $bg-basic-text);
-  margin: 27px 0 41px;
+  margin: 27px 0 38px;
   margin-left: auto;
   margin-right: auto;
 
   @media (min-width: $tablet-width) {
+    margin-top: 42px;
+    margin-bottom: 84px;
     font-size: 60px;
     line-height: 60px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 91px;
   }
 }

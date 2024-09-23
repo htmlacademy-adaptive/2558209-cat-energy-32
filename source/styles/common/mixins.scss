@@ -23,7 +23,7 @@
 
 @mixin bg-image-hero($device) {
   $image: "../../images/hero-bg-"+$device;
-  $linear-gradient:linear-gradient(to bottom left, #3f3e43, #525157);
+  $linear-gradient:linear-gradient(to bottom left, $bg-color-linear-gradient-first, $bg-color-linear-gradient-second);
 
   background-color: rgba($bg-color-secondary, 0.85);
   background-image:
