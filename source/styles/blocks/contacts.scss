@@ -93,3 +93,15 @@
 .contacts__container-heading {
   width: 100%;
 }
+
+.contacts__container-street {
+  width: 100%;
+
+  @media (min-width: $tablet-width) and (max-width: $desktop-width) {
+    width: 35%;
+  }
+}
+
+.contacts__container-heading {
+  width: 100%;
+}
