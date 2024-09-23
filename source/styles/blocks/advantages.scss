@@ -1,33 +1,32 @@
 .advantages {
-  margin-bottom: 20px;
+  @media (min-width: $tablet-width) {
+    margin: 0;
+  }
 }
 
 .advantages__item {
   display: grid;
   grid-template-columns: 70px 1fr;
   gap: 22px 0;
-  padding: 20px 18px;
+  padding: 21px 20px;
   background-color: $bg-color-button-secondary;
 
   &::before {
     content: "";
     display: block;
     width: 67px;
-    height: 50px;
+    height: 54px;
+    margin-left: -8px;
     background-position: center center;
     background-repeat: no-repeat;
     background-size: contain;
   }
 
-  &:not(:last-child) {
-    margin-bottom: 20px;
-  }
-
   @media (min-width: $tablet-width) {
-    padding: 75px 63px 59px 52px;
+    padding: 76px 63px 52px 52px;
     grid-template-rows: repeat(3, auto);
     grid-template-columns: 1fr 240px;
-    gap: 24px 10px;
+    gap: 16px 10px;
 
     &::before {
       justify-self: end;
@@ -53,6 +52,8 @@
       grid-area: auto;
       width: 100px;
       height: 106px;
+      margin-left: 1px;
+      margin-top: -6px;
     }
   }
 }
@@ -64,6 +65,22 @@
 .advantages__item--pro::before {
   @include bg-icon-image("cat-pro");
   margin-left: -8px;
+
+  @media (min-width: $tablet-width) {
+    width: 268px;
+    height: 200px;
+    margin-top: 14px;
+    margin-left: 0;
+    margin-right: -34px;
+  }
+
+  @media (min-width: $desktop-width) {
+    width: 134px;
+    height: 100px;
+    margin-left: -19px;
+    margin-top: 0;
+    margin-right: 0;
+  }
 }
 
 .advantages__item-heading {
@@ -84,12 +101,15 @@
   grid-column: 1 / -1;
 
   @media (min-width: $tablet-width) {
+    padding-bottom: 2px;
+    padding-top: 7px;
     font-size: 16px;
     line-height: 24px;
     grid-area: unset;
   }
 
   @media (min-width: $desktop-width) {
+    padding-top: 26px;
     grid-column: 1 / -1;
   }
 }
@@ -99,7 +119,7 @@
   display: flex;
   align-items: center;
   text-transform: uppercase;
-  padding-top: 20px;
+  padding-top: 19px;
   grid-column: 1 / -1;
   border-top: 1px solid $separator-color;
 
@@ -122,21 +142,40 @@
   }
 
   @media (min-width: $tablet-width) {
+    grid-area: unset;
+    justify-self: start;
     border-top: none;
+    padding-top: 34px;
     font-size: 20px;
     line-height: 30px;
+
+    &::after {
+      margin-left: 27px;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 14px;
+    grid-column: 1 / -1;
   }
 }
 
 .advantages__list {
   display: flex;
   flex-direction: column;
+  gap: 21px;
+  padding: 0 0 21px;
   margin: 0;
-  padding: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    gap: 37px;
+    padding: 0 0 50px;
+  }
 
   @media (min-width: $desktop-width) {
     flex-direction: row;
     gap: 80px;
+    padding: 82px 0 71px;
   }
 }

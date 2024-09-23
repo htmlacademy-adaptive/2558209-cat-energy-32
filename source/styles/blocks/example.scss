@@ -17,7 +17,7 @@
   grid-template-columns: 1fr 280px 1fr;
 
   @media (min-width: $tablet-width) {
-    padding: 40px 0 100px;
+    padding: 45px 0 100px;
     width: 100%;
     background: linear-gradient(0deg, $bg-color-button-secondary 462px, $text-with-bg-color 462px);
     grid-template-columns: 1fr 708px 1fr;
@@ -33,10 +33,15 @@
 
 .example__heading {
   grid-area: 1 / 2 / 2 / 3;
-  margin: 0 0 40px;
+  margin: 0 0 39px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 60px;
+  }
 
   @media (min-width: $desktop-width) {
-    margin: 0 0 48px;
+    padding-top: 72px;
+    padding-bottom: 85px;
   }
 }
 
@@ -47,14 +52,18 @@
   padding-bottom: 20px;
   grid-column: 2 / 3;
   justify-content: center;
-  gap: 15px 32px;
+  gap: 20px 32px;
 
   @media (min-width: $tablet-width) {
+    gap: 43px;
     justify-content: start;
+    padding-bottom: 100px;
   }
 
   @media (min-width: $desktop-width) {
+    gap: 55px 43px;
     padding-top: 70px;
+    padding-bottom: 75px;
   }
 }
 
@@ -75,6 +84,7 @@
   width: 100%;
 
   @media (min-width: $tablet-width) {
+    margin: 0 0 55px;
     font-size: 16px;
     line-height: 24px;
   }
@@ -86,7 +96,7 @@
 
 .example__value {
   @include text-style(24px, 24px, 400, $secondary-font, $bg-basic-text);
-  padding: 11px 14px 14px;
+  padding: 15px 14px 14px;
   text-transform: uppercase;
   text-align: center;
   border: 1px solid $bg-border-color-value;
@@ -103,11 +113,13 @@
   @include text-style(12px, 12px, 400);
   display: block;
   padding: 0 10px;
-  margin: -0.8em 19px 0;
+  margin: -0.7em 19px 0;
+  align-self: center;
   text-align: center;
   background-color: $bg-card-special;
 
   @media (min-width: $tablet-width) {
+    margin: -0.5em 8px 0;
     font-size: 14px;
     line-height: 14px;
     background-color: $text-with-bg-color;
@@ -123,7 +135,7 @@
   flex-basis: auto;
   flex-flow: row;
   justify-content: center;
-  gap: 0.5em;
+  gap: 0.3em;
   width: 100%;
 
   @media (min-width: $tablet-width) {
@@ -131,10 +143,13 @@
     flex-direction: column;
     flex-basis: 290px;
     margin-left: auto;
+    margin-right: 1px;
+    gap: 13px;
     width: auto;
   }
 
   @media (min-width: $desktop-width) {
+    align-items: center;
     flex-direction: row;
     justify-content: space-between;
     flex-basis: 357px;
@@ -150,7 +165,7 @@
   @media (min-width: $tablet-width) {
     text-align: end;
     font-size: 20px;
-    line-height: 20px;
+    line-height: 14px;
   }
 }
 
@@ -159,17 +174,22 @@
   padding: 0;
   margin: 0;
   text-transform: uppercase;
+  align-self: auto;
 
   @media (min-width: $tablet-width) {
     text-align: end;
     font-size: 20px;
     line-height: 20px;
   }
+
+  @media (min-width: $desktop-width) {
+    margin-right: 30px;
+  }
 }
 
 .example__slider-control-button {
   position: absolute;
-  left: 50%;
+  left: 49%;
   display: block;
   padding: 0;
   width: 4px;
@@ -226,6 +246,10 @@
   &:is(:hover, :focus-visible, :focus)::after {
     background-color: $bg-color-secondary;
   }
+
+  @media (min-width: $tablet-width) {
+    left: 49.5%;
+  }
 }
 
 .example__slider {
@@ -243,7 +267,7 @@
   }
 
   @media (min-width: $desktop-width) {
-    margin-top: 50px;
+    margin-top: 73px;
     justify-self: right;
     grid-area: 1 / 3 / -1 / 4;
   }

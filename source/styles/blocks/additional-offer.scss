@@ -3,8 +3,8 @@
   grid-template-rows: auto;
   grid-template-columns: 1fr 280px 1fr;
   align-items: center;
-  margin-top: 14px;
-  margin-bottom: 35px;
+  margin-top: 23px;
+  margin-bottom: 33px;
 
   &::after {
     content: "";
@@ -16,8 +16,8 @@
 
   @media (min-width: $tablet-width) {
     grid-template-columns: 1fr 708px 1fr;
-    margin-top: 35px;
-    margin-bottom: 80px;
+    margin-top: 74px;
+    margin-bottom: 81px;
 
     &::after {
       grid-area: 1 / 1 / auto / -1;
@@ -25,6 +25,8 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-top: 66px;
+    margin-bottom: 78px;
     grid-template-columns: 1fr 1220px 1fr;
   }
 }
@@ -52,11 +54,12 @@
 
 .additional-offer__list {
   margin: 0;
+  margin-bottom: 35px;
   padding: 0;
   list-style: none;
 
   @media (min-width: $tablet-width) {
-    margin-bottom: 70px;
+    margin-bottom: 73px;
   }
 
   @media (min-width: $desktop-width) {
@@ -67,18 +70,22 @@
 }
 
 .additional-offer__item {
-  padding: 14px 0 15px;
+  padding: 13px 0 17px;
   flex-direction: column;
   border-top: 1px solid $bg-border-color-value;
 
+  &:last-child {
+    border-bottom: 1px solid $bg-border-color-value;
+  }
+
   @media (min-width: $tablet-width) {
-    padding: 27px 38px;
+    padding: 25px 38px;
     border: 1px solid $bg-border-color-value;
     border-bottom: none;
   }
 
   @media (min-width: $desktop-width) {
-    padding: 15px 0;
+    padding: 15.6px 0;
     justify-content: space-between;
     flex-direction: row;
     align-items: center;
@@ -88,7 +95,7 @@
 }
 
 .additional-offer__heading-card {
-  margin-bottom: 13px;
+  margin-bottom: 12px;
   width: 100%;
 
   @media (min-width: $tablet-width) {
@@ -96,6 +103,7 @@
   }
 
   @media (min-width: $desktop-width) {
+    margin-right: 42px;
     margin-bottom: 0;
   }
 }
