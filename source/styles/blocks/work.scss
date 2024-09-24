@@ -51,6 +51,12 @@
   }
 }
 
+.work__text-br {
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
 .work__item {
   display: flex;
   flex-wrap: wrap;
