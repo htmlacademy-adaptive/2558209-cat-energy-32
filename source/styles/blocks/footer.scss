@@ -1,0 +1,53 @@
+.footer {
+  background-color: $bg-color-button-secondary;
+}
+
+.footer__container {
+  padding: 21px 0 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  @media (min-width: $tablet-width) {
+    padding: 36px 0;
+    flex-direction: row;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding: 53px 0;
+  }
+}
+
+.footer__logo {
+  padding: 20px 0;
+  display: flex;
+  border-bottom: 1px solid $separator-color;
+  justify-content: center;
+  width: 100%;
+  transition: opacity 0.3s ease-in-out;
+
+  &:hover,
+  &:focus {
+    opacity: 0.6;
+  }
+
+  &:active {
+    opacity: 0.4;
+  }
+
+  @media (min-width: $tablet-width) {
+    justify-content: flex-start;
+    border-bottom: unset;
+  }
+}
+
+.footer__social-network {
+  padding: 20px 0;
+  border-bottom: 1px solid $separator-color;
+  width: 100%;
+
+  @media (min-width: $tablet-width) {
+    border-bottom: unset;
+  }
+}

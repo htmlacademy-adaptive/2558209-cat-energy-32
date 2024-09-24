@@ -1,0 +1,130 @@
+.work {
+  margin-bottom: 49px;
+
+  @media (min-width: $tablet-width) {
+    margin-bottom: 46px;
+  }
+
+  @media (min-width: $desktop-width) {
+    margin-bottom: 0;
+  }
+}
+
+.work__heading {
+  margin: 0 0 41px;
+
+  @media (min-width: $tablet-width) {
+    margin: 0 0 31px;
+  }
+}
+
+.work__list {
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    flex-flow: row wrap;
+    gap: 37px 57px;
+  }
+
+  @media (min-width: $desktop-width) {
+    gap: 37px 80px;
+  }
+}
+
+.work__text {
+  @include text-style(14px, 18px, 400);
+  margin: 0;
+  width: 71%;
+
+  @media (min-width: $tablet-width) {
+    width: 100%;
+    font-size: 16px;
+    line-height: 24px;
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-top: 4px;
+  }
+}
+
+.work__text-br {
+  @media (min-width: $tablet-width) {
+    display: block;
+  }
+}
+
+.work__item {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  counter-increment: marker 1;
+
+  &::before {
+    content: "";
+    display: block;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 30px 32px;
+    background-color: $bg-color-secondary;
+    width: 60px;
+    height: 60px;
+  }
+
+  &:not(:last-child) {
+    margin-bottom: 20px;
+  }
+
+  @media (min-width: $tablet-width) {
+    position: relative;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+    min-height: 280px;
+    padding: 40px 80px 40px 0;
+    width: 325px;
+
+    &::before {
+      width: 80px;
+      height: 80px;
+    }
+
+    &::after {
+      @include text-style(280px, 280px, 400, $secondary-font, $bg-color-button-secondary);
+      content: counter(marker);
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 115px;
+      z-index: -1;
+    }
+
+    &:not(:last-child) {
+      margin-bottom: 0;
+    }
+  }
+
+  @media (min-width: $desktop-width) {
+    padding-right: 0;
+    width: 245px;
+  }
+}
+
+.work__item--card-one::before {
+  @include bg-icon-image("leaf");
+}
+
+.work__item--card-two::before {
+  @include bg-icon-image("water");
+}
+
+.work__item--card-three::before {
+  @include bg-icon-image("eat");
+}
+
+.work__item--card-four::before {
+  @include bg-icon-image("clock");
+}

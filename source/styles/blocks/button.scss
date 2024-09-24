@@ -1,0 +1,17 @@
+.button {
+  @include text-style(16px, 20px, 400, $secondary-font, $text-with-bg-color);
+  background-color: $bg-color-secondary;
+  border: none;
+  text-decoration: none;
+  text-transform: uppercase;
+  transition: background-color ease-in-out 0.3s;
+
+  &:hover,
+  &:focus {
+    background-color: $bg-color-secondary-hover;
+  }
+
+  &:active {
+    color: $button-color-active;
+  }
+}

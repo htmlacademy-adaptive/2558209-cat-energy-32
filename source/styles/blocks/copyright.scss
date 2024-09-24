@@ -1,0 +1,44 @@
+.copyright {
+  padding: 20px 0;
+  width: 100%;
+}
+
+.copyright__name {
+  @include text-style(16px, 20px, 400);
+
+  @media (min-width: $tablet-width) {
+    margin-right: 23px;
+  }
+}
+
+.copyright__link {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 27px;
+    height: 34px;
+    mask-position: center;
+    mask-repeat: no-repeat;
+    mask-size: contain;
+    mask-image: url("../../icons/stack.svg#html-academy");
+    background-color: $bg-color-control;
+    transition: background-color 0.3s ease-in-out;
+  }
+
+  &:is(:hover, :focus-visible, :focus)::after {
+    background-color: $bg-color-secondary;
+  }
+
+  &:active {
+    opacity: 0.6;
+  }
+
+  @media (min-width: $tablet-width) {
+    align-items: center;
+    justify-content: end;
+  }
+}

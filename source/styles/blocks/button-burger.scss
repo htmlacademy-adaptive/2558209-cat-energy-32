@@ -1,0 +1,12 @@
+.button-burger {
+  @include bg-icon-image("menu-open");
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-color: transparent;
+  border: none;
+}
+
+.button-burger--close {
+  @include bg-icon-image("menu-close");
+}

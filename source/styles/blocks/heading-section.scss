@@ -1,0 +1,8 @@
+.heading-section {
+  @include text-style(36px, 40px, 400, $secondary-font, $bg-basic-text);
+
+  @media (min-width: $tablet-width) {
+    font-size: 60px;
+    line-height: 60px;
+  }
+}
