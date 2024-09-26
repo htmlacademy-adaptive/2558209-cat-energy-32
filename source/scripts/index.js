@@ -2,7 +2,7 @@
 const buttonMenu = document.querySelector('.button-burger');
 const menu = document.querySelector('.nav');
 
-buttonMenu.classList.remove('button-burger--close');
+buttonMenu.classList.remove('button-burger--close-nojs');
 menu.classList.remove('nav--open-nojs');
 
 buttonMenu.addEventListener('click', () => {

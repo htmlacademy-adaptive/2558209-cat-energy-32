@@ -5,9 +5,9 @@
 }
 
 .list__link {
-  @include text-style(18px, 20px, 400, $secondary-font, $bg-basic-text);
+  @include text-style(20px, 20px, 400, $secondary-font, $bg-basic-text);
   position: relative;
-  padding: 23px;
+  padding: 23px 0 22px;
   border-top: 1px solid $bg-border-color-section;
   display: block;
   text-align: center;
