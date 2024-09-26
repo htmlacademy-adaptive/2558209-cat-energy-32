@@ -163,7 +163,9 @@
 
 .advantages__list {
   display: flex;
+  flex-flow: column wrap;
   flex-direction: column;
+  justify-content: center;
   gap: 21px;
   padding: 0 0 21px;
   margin: 0;

@@ -10,3 +10,7 @@
 .button-burger--close {
   @include bg-icon-image("menu-close");
 }
+
+.button-burger--close-nojs {
+  display: none;
+}
